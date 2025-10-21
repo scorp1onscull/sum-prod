@@ -7,12 +7,13 @@ int main(int argc, char* argv[]){
 		char*number = argv[1];
 		int index = 0;
 		char ch;
-		while( number[index] != '\0' ){
-			if ( number[index] >= '0' && number[index] <= '9'){
-				sum += number[index];
-				mult *= number[index];
+		while( (ch = number[index] != '\0' && index <11 )){
+			if ( ch >= '0' && ch <= '9'){
+				sum += (ch-'0');
+				mult *= (ch-'0');
 			} else {
 				std::cout << "wrong number" << argv[1] << " " << std::endl;
+				return 1;
 			}
 		}
 		std::cout << sum << ", " << mult << std::endl;
