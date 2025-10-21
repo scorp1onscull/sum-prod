@@ -15,4 +15,5 @@ jobs:
     - uses: actions/checkout@v4
     - name: Build
       run: g++ fimoz.cpp -o sumprod
-      
+    - name: Test
+      run: ./test.sh  
